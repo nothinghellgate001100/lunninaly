@@ -13,7 +13,6 @@
       background-color: #f4f4f4;
       margin: 0;
       padding-top: 20px;
-      /* Added padding to align with the second page */
     }
 
     .header {
@@ -69,7 +68,37 @@
 
     .main-menu div .icon {
       font-size: 30px;
-      color: #6d8346;
+    }
+
+    .main-menu div a {
+      display: block;
+      margin-top: 10px;
+      padding: 10px;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .main-menu div a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+
+    .main-menu .deposit a {
+      background-color: #4caf50; /* Green */
+    }
+
+    .main-menu .withdrawal a {
+      background-color: #f44336; /* Red */
+    }
+
+    .main-menu .wallet-management a {
+      background-color: #2196f3; /* Blue */
+    }
+
+    .main-menu .invite a {
+      background-color: #ff9800; /* Orange */
     }
 
     .sub-menu {
@@ -85,6 +114,13 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      text-decoration: none;
+      color: black;
+      transition: background-color 0.3s ease;
+    }
+
+    .sub-menu .item:hover {
+      background-color: #f1f1f1;
     }
 
     .sub-menu .item i {
@@ -107,12 +143,18 @@
       text-align: center;
     }
 
-    .footer-menu div i {
-      font-size: 20px;
+    .footer-menu div a {
+      text-decoration: none;
       color: #999;
+      display: block;
+      transition: color 0.3s ease;
     }
 
-    .footer-menu div.active i {
+    .footer-menu div a:hover {
+      color: #6d8346;
+    }
+
+    .footer-menu div.active a {
       color: #6d8346;
     }
 
@@ -140,8 +182,14 @@
       }
 
       .main-menu div {
-        width: 50%;
+        width: 80%;
         margin: 10px 0;
+      }
+
+      .sub-menu .item {
+        width: 335px;
+        height: 386px;
+        box-sizing: border-box;
       }
     }
   </style>
@@ -151,7 +199,6 @@
   <div class="header">
     <span>My Account</span>
     <i class="fa fa-comment icon"></i>
-
   </div>
 
   <div class="account-info">
@@ -169,75 +216,67 @@
   </div>
 
   <div class="main-menu">
-    <div>
+    <div class="deposit">
       <i class="fas fa-wallet icon"></i>
-      <a href="deposit.html">
-        <p>Deposit</p>
-      </a>
-
+      <a href="deposit.html">Deposit</a>
     </div>
-    <div>
+    <div class="withdrawal">
       <i class="fas fa-credit-card icon"></i>
-      <a href="withdrawal.html">
-        <p>Withdrawal</p>
-      </a>
+      <a href="withdrawal.html">Withdrawal</a>
     </div>
-    <div>
+    <div class="wallet-management">
       <i class="fas fa-cogs icon"></i>
-      <a href="wallet-management.html">
-        <p>Wallet Management
-        </p>
-      </a>
+      <a href="wallet-management.html">Wallet Management</a>
     </div>
-    <div>
+    <div class="invite">
       <i class="fas fa-user-plus icon"></i>
-      <a href="invite.html">
-        <p>Invite Friends</p>
-      </a>
+      <a href="invite.html">Invite Friends</a>
     </div>
   </div>
 
   <div class="sub-menu">
-    <div class="item">
-      <a href="mine.html"> <span>Profile</span></a>
+    <a class="item" href="mine.html">
+      <span>Profile</span>
       <i class="fa fa-angle-right"></i>
-    </div>
-    <div class="item">
-      <a href="deposit_records.html"><span>Deposit-Records</span></a>
+    </a>
+    <a class="item" href="deposit_records.html">
+      <span>Deposit Records</span>
       <i class="fa fa-angle-right"></i>
-    </div>
-    <div class="item">
-      <a href="withdrawal-records.html"><span>Withdrawal-Records</span></a>
+    </a>
+    <a class="item" href="withdrawal-records.html">
+      <span>Withdrawal Records</span>
       <i class="fa fa-angle-right"></i>
-    </div>
-    <div class="item">
-      <a href="setting.html"><span>Setting</span></a>
+    </a>
+    <a class="item" href="setting.html">
+      <span>Setting</span>
       <i class="fa fa-angle-right"></i>
-    </div>
+    </a>
   </div>
 
   <div class="footer-menu">
     <div class="active">
-      <i class="fa fa-home"></i>
-      <p>Home</p>
+      <a href="#">
+        <i class="fa fa-home"></i>
+        <p>Home</p>
+      </a>
     </div>
     <div>
-      <i class="fa fa-comments"></i>
       <a href="services.html">
+        <i class="fa fa-comments"></i>
         <p>Service</p>
       </a>
-
     </div>
     <div>
-      <i class="fa fa-th-large"></i>
       <a href="menu.html">
+        <i class="fa fa-th-large"></i>
         <p>Menu</p>
       </a>
-
     </div>
     <div>
-      <i class="fa fa-user"><a href="mine.html" </a></i>
-      <p>Mine</p>
+      <a href="mine.html">
+        <i class="fa fa-user"></i>
+        <p>Mine</p>
+      </a>
     </div>
   </div>
 </body>
